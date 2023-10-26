@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display&family=Poppins&display=swap');
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html {
+    margin: 50px;
+    background-color: #4c0056;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+    color: #00f7f4;
+}
+
+/*typing animation for h1 tags*/
+.typewriter{
+    position: relative;
+}
+
+.typewriter::after{
+    content: '|';
+    position: absolute;
+    right: 0;
+    color:#00f7f4;
+    background-color: #4c0056;
+    width: 100%;
+    animation: typing 3s steps(30) alternate infinite,
+                line 1s infinite;
+}
+
+@keyframes typing{
+    to{
+        width: 0%;
+    }
+}
+
+@keyframes line{
+    50%{
+        color: transparent;
+    }
+}
+
+/* Style for the p tag */
+p {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+/* glow style for the button */
+.look{
+    position: relative;
+    background: #ff178b;
+    color:#00f7f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    border: none;
+}
+
+.look:hover{
+    letter-spacing: 0.1em;
+    background: var(--clr);
+    box-shadow: 0 0 33px var(--clr);
+    color: #ff178b;;
+}
+
+/*img bounce animation*/
+.girl, .room, .icons-1, .icons-2{
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+/* Style for the navigation */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 150px;
+    margin-right: 30px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    padding: 10px;
+}
+
+/* Add the glass morphism effect to all glass-box items */
+.glass-box {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    display: inline-block; /* Make the box wrap its content */
+ 
+  padding: 10px; /* Add some padding for spacing */
+  box-sizing: border-box; /* Include padding in the element's total width */
+  text-align: left; /* Align the text inside the box to the left */
+  }
+
+/*back to top button*/
+.scroll-arrow {
+    position: fixed;
+    right: 25px;
+    bottom: 23px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 11, 112, 0.66);
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    z-index: 9;
+  }
+
+  /*text styling*/
+  #scroll-text{
+    color: white;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    font-size: 15px;
+    z-index: 10;
+    text-shadow: 2px 2px 10px purple;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+  }
+  #scroll-text:hover {
+    color: #a1f5f3;
+  }
+
+.result-link {
+    color:#00f7f4;
+}
+
+/*setting the traits section*/
+
+.traits-sec {
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of the columns to have "girl" on the right */
+    align-items: center; /* Vertically center the content in the section */
+    justify-content: center; /* Center the content horizontally */
+    padding: 25px;
+  }
+  
+  .traits {
+    flex: 1; /* Let the "traits" class take available space */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: left; /* Align the text to the left within the "traits" box */
+    padding: 25px;
+  }
+
+  .girl {
+    max-width: 100%;
+    height: auto; /* Use auto for maintaining aspect ratio */
+  }
+  
+/*setting the hobbies section*/
+.hobbies-h2{
+    text-align: center;
+    padding-top: 150px;
+}
+
+  .hobbies-sec {
+    display: flex;
+    flex-direction: row; /* Arrange elements in a row */
+    align-items: center; /* Vertically center the content in the section */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center-align the text in the section */
+    padding-bottom: 150px;
+  }
+  
+  .hobbies {
+    flex: 1; /* Let the "hobbies" class take available space */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: left; /* Align the text to the left within the "hobbies" box */
+  }
+  
+  /* Set a max-width for the images to control their size */
+  .room,
+  .icons-2 {
+    max-width: 100%;
+    height: auto; /* Use auto for maintaining aspect ratio */
+  }
+
+  /*setting the heroes section*/
+.heroes-h2{
+    text-align: center;
+    padding-top: 150px;
+}
+  .heroes {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: stretch; /* Center the content vertically */
+    text-align: center; /* Center-align the text in the section */
+    padding-bottom: 150px;
+  }
+  
+  .glass-box {
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center-align the text within the "glass-box" */
+  }
+  
+  /* Set a max-width for the images to control their size */
+  .hero {
+    max-width: 100%;
+    height: auto; /* Use auto for maintaining aspect ratio */
+  }
+
+/*setting the personality quiz section*/
+.quiz-sec {
+    display: flex;
+    justify-content: space-between; /* Create space between the two columns */
+    align-items: center; /* Center the content vertically */
+    text-align: center; /* Center-align the text in the section */
+  }
+  
+  .glass-box {
+    flex: 1; /* Allow both divs to take available space */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: center; /* Center-align the text within the "glass-box" */
+  }
+  
+  /* Set a max-width for the image to control its size */
+  .quiz-result {
+    max-width: 100%;
+    height: auto; /* Use auto for maintaining aspect ratio */
+  }
+
+  .rating{
+    color: #ff178b;
+  }
+  
+  /**media query for responsiveness**/
+  /* Smaller screens, like tablets and smartphones */
+@media screen and (max-width: 768px) {
+    .typewriter {
+        font-size: 24px; /* Adjust the font size as needed */
+    }
+
+    .traits-sec {
+        flex-direction: column; /* Stack traits and image vertically */
+    }
+
+    .girl {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .hobbies-h2 {
+        font-size: 24px; /* Adjust the font size as needed */
+    }
+
+    .hobbies-sec {
+        flex-direction: column; /* Stack room, hobbies, and icons vertically */
+    }
+
+    .room,
+    .icons-2 {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .heroes-h2 {
+        font-size: 24px; /* Adjust the font size as needed */
+    }
+
+    .heroes {
+        flex-direction: column; /* Stack hero sections vertically */
+    }
+
+    .hero {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .quiz-sec {
+        flex-direction: column; /* Stack quiz result and content vertically */
+    }
+
+    .quiz-result {
+        height: auto;
+        max-width: 100%;
+    }
+}
